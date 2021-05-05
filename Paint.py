@@ -21,11 +21,6 @@ def line(start, end):
     goto(end.x, end.y)
 
 def square(start, end):
-    """
-    [Draw circle]
-    :parametrer start: [Values of the first click in x and y]
-    :parameter ends: [Values of the second click in x and y]
-    """
     
     up()
     goto(start.x, start.y)
@@ -39,6 +34,13 @@ def square(start, end):
     end_fill()
 
 def circulo(start, end):
+    
+     """
+    [Draw circle]
+    :parametrer start: [Values of the first click in x and y]
+    :parameter ends: [Values of the second click in x and y]
+    """
+    
     up()
     goto(start.x, start.y)
     down()
