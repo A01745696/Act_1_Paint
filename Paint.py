@@ -9,10 +9,13 @@ Exercises
 5. Add width parameter.
 
 """
+#Codigo modificado por:
+#Autor: Yahir Cortes Rodriguez
+#Autor: Fabrizio González
 
 from turtle import *
 from freegames import vector
-
+#Funciones de figuras de dibujo
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -55,7 +58,10 @@ def rectangle(start, end):
     end_fill()
 
 def triangle(start, end):
-    "Draw triangle from start to end."
+    """[Draw triangle]
+    :parameter start: [Values of the 1st click in x and y]
+    :parameter end: [Values of the last click in x and y]
+    """
     up()
     goto(start.x, start.y)
     down()
@@ -88,12 +94,14 @@ state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
+#Teclas que cambian color
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+#Teclas que cambian la figura
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
